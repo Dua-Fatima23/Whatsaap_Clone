@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Web Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Chats</h2>
+                <i class="fa fa-user-circle fa-2x"></i>
+            </div>
+            <div class="add-contact" onclick="addContact()">+ Add Contact</div>
+            <div class="chat-list" id="chatList">
+                <div class="chat" onclick="openChat('Hamood')">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <div>
+                        <h3>Hamood</h3>
+                        <p>Hey! What's up?</p>
+                    </div>
+                </div>
+                <div class="chat" onclick="openChat('Asfa')">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <div>
+                        <h3>Asfa</h3>
+                        <p>Let's talk later!</p>
+                    </div>
+                </div>
+                <div class="chat" onclick="openChat('Yourself')">
+                    <img src="https://via.placeholder.com/40" alt="User">
+                    <div>
+                        <h3>Yourself</h3>
+                        <p>Remember to complete your task!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-window">
+            <div class="chat-header" id="chatHeader">
+                <span>Select a chat</span>
+                <div class="chat-header-icons">
+                    <i class="fa fa-phone"></i>
+                    <i class="fa fa-video"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
